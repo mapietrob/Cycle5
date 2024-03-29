@@ -1,0 +1,198 @@
+/* Base styles */
+body {
+    background-color: #2c3e50; /* Dark blue shade */
+    color: #ecf0f1; /* Soft white */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #ecf0f1;
+    text-decoration: none; /* Removes underline from links */
+}
+
+/* Header styles */
+header {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally */
+    padding: 20px;
+    background-color: #34495e; /* Adjust background color as needed */
+    color: #ecf0f1;
+    text-align: center;
+}
+
+header img {
+    margin-right: 20px;
+}
+
+header h1 {
+    color: #ecf0f1; /* Light text color for the title */
+    margin-bottom: 20px; /* Adds space between the title and the nav bar */
+}
+
+#header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-content img {
+    margin-right: 20px; /* Space between logo and title */
+}
+
+nav {
+    margin-top: 20px;
+}
+
+/* Navigation styles */
+nav ul {
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Centers the list items */
+    width: 100%; /* Ensures the nav takes full header width */
+}
+
+nav li {
+    margin-right: 10px; /* Space between buttons */
+}
+
+nav ul li {
+    margin: 10px 0; /* Adds vertical margin for space between buttons */
+}
+
+nav ul li a {
+    background-color: #16a085; /* Teal */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c; /* Lighter teal */
+}
+
+/* Styling links to look like buttons */
+nav a {
+    background-color: #3498db; /* Blue */
+    color: #ffffff; /* White text */
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block; /* Necessary for padding and width */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth background color change and slight transform on hover */
+    text-decoration: none; /* Removes underline */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a subtle shadow for depth */
+    margin: 0 5px; /* Space between buttons */
+}
+
+/* Hover and focus styles for buttons */
+nav a:hover, nav a:focus {
+    background-color: #2980b9; /* A darker blue */
+    color: #ecf0f1;
+    transform: translateY(-2px); /* Slightly raise the button */
+    text-decoration: none; /* Ensures underline does not reappear on focus */
+}
+
+/* Active link style, if you're using a class to denote the active page */
+nav a.active {
+    background-color: #1abc9c; /* Different color to highlight the active page */
+    color: #ffffff;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+.user-results {
+    text-align: center; /* Center aligns content for the whole results container */
+}
+
+.result {
+    background-color: #34495e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    /* Ensure content within each result is centered */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align flex items */
+}
+
+.creature-image {
+    max-width: 100px; /* or your desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Space between text and image */
+}
+
+.creature, .result {
+    background-color: #34495e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center; /* Centers text and images */
+}
+
+.creature img, .result img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Allows margin to be applied properly */
+    margin: 0 auto; /* Centers the image */
+}
+
+/* Button styling for the Start Test button, if applicable */
+button {
+    background-color: #16a085; /* Teal */
+    color: #ecf0f1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1abc9c;
+}
+
+.user-results .result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Adds space between entries */
+    padding: 10px; /* Padding around each result */
+    background-color: #2c3e50; /* Dark theme background for each result */
+    color: #ecf0f1; /* Light theme text color */
+}
+
+.user-results .result img {
+    width: 100px; /* Fixed width for the creature images */
+    height: auto; /* Maintain aspect ratio */
+    align-items: center;
+}
+
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stacks logo and title vertically on smaller screens */
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-direction: column; /* Stack nav items vertically on smaller screens */
+        align-items: center;
+    }
+
+    nav li {
+        margin-bottom: 10px; /* Space between buttons when stacked */
+    }
+
+    .creature, .result {
+        padding: 10px;
+    }
+}
